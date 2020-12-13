@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<title>Fortune Teller</title>
+<h1>FortueTeller.html <h1>
+
+
+
+<button onclick="myFunction()">
+<p id="demo">What is Your Future? </p>
+</button>
+<script>
+
+//randomJob, randomLocation, randomWife, kids will ve put in + # + that will make the program run
+
+var jobs = ["Accountant.", "Retail Worker", "Zoo Keeper" ];
+var random =  Math.floor((Math.random() * jobs.length));
+var randomJob = jobs[random];
+
+var locations = ["California", "Laredo", "North Carolina"];
+var random =  Math.floor((Math.random() * location.length));
+var randomLocation = locations[random];
+
+var possibleWifes = ["Amy", "Joseline", "Anahi", "Abel", "Pancho"];
+var random =  Math.floor((Math.random() * possibleWifes.length));
+var randomWife = possibleWifes[random];
+
+var kids = Math.floor(Math.random()*11 );
+
+// On click function
+document.getElementById("demo").onclick = function() {myFunction()};
+function myFunction() 
+{ 
+document.getElementById("demo").innerHTML = "You will be a " + randomJob + " In " + randomLocation + " and married to " + randomWife + " with " + kids + " Kids.";
+}
+</script>
+
+</body>
+</html>
